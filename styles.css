@@ -278,6 +278,8 @@ html {
 
     /* Burger anzeigen */
 
+    
+
     .burger-button {
         display: flex;
     }
@@ -419,6 +421,10 @@ html {
 
     .titelbox-button {
         padding-top: 15px;
+    }
+
+    .nav-center a {
+         font-size: 28px;
     }
 
 }
