@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielhafen</title>
+     <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav">
+
+      <!-- Nav left / Burger-Menü -->
+    <div class="nav-menu">
+
+        <!-- Unsichtbare Checkbox -->
+        <input type="checkbox" id="burger-toggle">
+
+        <!-- Burger-Icon -->
+        <label for="burger-toggle" class="burger-button" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menü-Links -->
+        <div class="nav-links">
+            <a href="spiele.html" class="nav-left">Unsere Spiele</a>
+            <a href="Ueber-uns.html" class="nav-left">Über uns</a>
+            <a href="erklaervideos.html" class="nav-left">Erklärvideos</a>
+        </div>
+
+    </div>
+
+    <!-- Logo Mitte -->
+    <div class="nav-center">
+        <a href="index.html">
+            <!--<img src="assets/Logo.png" class="logo">-->
+            <span>Spielhafen</span>
+        </a>
+    </div>
+
+    <!-- Kontakt --> 
+    <div class="nav-right">
+        <a onclick="scrollToContact()">Kontakt</a>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero fade-in">
+    
+    <div class = "titelbox">
+        <div class="titelbox-inhalt">
+            <h1 class="titeltext">Über uns</h1>
+        </div>
+
+        <img src="assets/florens_leon.jpg" class="hero-img">
+    </div>
+
+</section>
+
+<!-- ================= VERLAG ================= -->
+<section class="publisher fade-in">
+
+
+    <h1 class="titeltext">Zwei-Personen-Verlag</h1>
+
+    <p class="verlagsection-text">
+        Alles in vier Händen: Spielhafen ist ein Zwei-Personen-Verlag, der jeden Schritt selbst <br> gestaltet – von der ersten Idee über Konzept, Design und Feinschliff bis hin zu Produktion <br> und Vermarktung. Diese Nähe zum gesamten Prozess erlaubt uns maximale Freiheit, höchste <br> Effizienz und Spiele mit einem ganz eigenen Charakter – durchdacht, stimmig und bis ins <br> Detail ausgearbeitet.
+    </p>
+    
+
+    <div class="publisher-images">
+        <img src="assets/konzeptieren.png">
+        <img src="assets/gestalten.png">
+        <img src="assets/produzieren.png">
+        <img src="assets/vermarkten.png">
+    </div>
+
+<div class = "ueber-uns">
+    <a href="Ueber-uns.html" class="button">Über uns</a>
+
+    </div>
+</section>
+
+<!-- ================= SPIELCHRONIK ================= -->
+<section class="spielchronik">
+
+    <h1 class="titeltext">Spielchronik</h1>
+    <hr class="erste-linie-spielchronik">
+   
+    <div class = "zeile">
+    <p class="herotext">RICHI - Das kartenspiel</p>
+    <p class="herotext">Party-/ Familienspiel</p>
+    <p class="herotext">2025</p>
+    </div>
+
+     <hr class="linie-spielchronik">
+
+     <div class = "zeile">
+    <p class="herotext">SPEED UP</p>
+    <p class="herotext">Familienspiel</p>
+    <p class="herotext">2026</p>
+    </div>
+
+    <hr class="linie-spielchronik">
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="footer">
+
+    <div class="contact-section">
+            <div class="kontakt-text">
+            <h3 class="kontakt-title">Kontakt</h3>
+            </div>
+
+             <div class="kontakt-textinfo">
+            <p>Hast du ein Feedback zu einem Spiel oder eine Anfrage auf eine grössere Bestellung ? Dann kontaktiere uns gerne. </p>
+              <p> <br> Vielen Dank für deine Nachricht!</p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Name, Vorname">
+            <input type="text" placeholder="Unternehmen, Firma">
+            <input type="email" placeholder="E-Mail Adresse">
+            <input type="text" placeholder="*Telefonnummer">
+            <textarea placeholder="Nachricht"></textarea>
+
+            <button type="submit" class="btn">
+                <img src="assets/mail.png" class="mail-icon"> Senden
+            </button>
+        </form>
+
+    </div>
+
+    <hr class="linie">
+
+    <div class="footer-bottom">
+
+        <div class="links-footer">
+        <a href="datenschutz.html" class="datenschutz-link">
+        Datenschutz
+        </a>
+        <a>©2026</a>
+        </div>
+
+        <!-- Logo Mitte -->
+        <div class="nav-center">
+        <a href="index.html">
+            <img src="assets/Logo.png" class="logo">
+            <span>Spielhafen</span>
+        </a>
+         </div>
+
+        <div class="socials">
+    <a href="https://www.instagram.com/kartenspiel.richi/" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.youtube.com/@kartenspielrichi" target="_blank">
+        <img src="assets/YouTube.png" alt="YouTube">
+    </a>
+
+    <a href="https://www.tiktok.com" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok">
+    </a>
+
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/Facebook.png" alt="Facebook">
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

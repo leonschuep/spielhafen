@@ -1,0 +1,1407 @@
+/* ================= VARIABLEN (EINFACH ANPASSBAR) ================= */
+:root {
+    --radius: 15px;
+    --padding: 40px;
+
+    --color-light: #f5f5f5;
+     --color-grey: #e3e3e3;
+    --color-dark: #333;
+    --color-blue: #1e3a8a;
+    --color-darkblue: #162d6b; 
+
+    --font-title: 'AlegreyaSC';
+    --font-text: 'Kristen';
+}
+
+/* ================= FONTS ================= */
+@font-face {
+    font-family: 'Kristen';
+    src: url('assets/fonts/ITCKRIST.TTF');
+}
+
+@font-face {
+    font-family: 'AlegreyaSC';
+    src: url('assets/fonts/Alegreya_SC/AlegreyaSC-Regular.ttf');
+}
+
+/* ================= ALLGEMEIN ================= */
+body {
+    margin: 0px;
+    font-family: var(--font-text);
+    font-size: 14px;
+}
+
+a {
+
+    font-family: var(--font-text);
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+
+/* ================= TABLET ================= */
+/* Unter 1100px */
+
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* ================= HANDY ================= */
+/* Unter 600px */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
+
+h2 {
+    margin: 0;
+  font-family: var(--font-text);
+    font-size: 20px;
+}
+
+p {
+  margin: 0px;
+    font-family: var(--font-text);
+    font-size: 14px;
+}
+
+img {
+    border-radius: var(--radius);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 40px 0px 40px;
+    position: relative;
+}
+
+
+/* ================= BURGER MENÜ ================= */
+
+.nav-menu {
+    position: relative;
+}
+
+
+/* Checkbox unsichtbar machen */
+
+#burger-toggle {
+    display: none;
+}
+
+
+/* ================= BURGER BUTTON ================= */
+
+.burger-button {
+    display: none;
+
+    width: 50px;
+    height: 40px;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: var(--radius);
+
+    background-color: var(--color-light);
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Burger-Linien */
+
+.burger-button span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: black;
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover-Effekt */
+
+@media (hover: hover) and (pointer: fine) {
+    .burger-button:hover {
+        background-color: var(--color-grey);
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+/* ================= NORMALE NAV LINKS ================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left {
+    padding: 10px 15px;
+
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    border-radius: var(--radius);
+    background-color: var(--color-light);
+
+    display: inline-block;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover */
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-left:hover {
+        background-color: var(--color-grey);
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+/* ================= LOGO ================= */
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 30px;
+    border-radius: 0;
+}
+
+.nav-center a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'AlegreyaSC';
+    font-size: 32px;
+
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    
+
+    transition: all 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-center a:hover {
+        background-color: var(--color-grey);
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+/* ================= KONTAKT ================= */
+
+.nav-right {
+    display: flex;
+
+    border-radius: var(--radius);
+    background-color: var(--color-light);
+
+    padding: 10px 15px;
+
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-right:hover {
+        background-color: var(--color-grey);
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+/* ================================================= */
+/* ================= MOBILE MENÜ ================== */
+/* ================================================= */
+
+@media (max-width: 1100px) {
+
+    /* Burger anzeigen */
+
+    .burger-button {
+        display: flex;
+    }
+
+    .nav {
+        padding: 20px 20px 0px 20px;
+    }
+    /* Normale Links zuerst verstecken */
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 60px;
+        left: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+
+        min-width: 180px;
+
+        padding: 10px;
+
+        background-color: var(--color-light);
+        border-radius: var(--radius);
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        z-index: 1000;
+    }
+
+
+    /* Menü öffnen, wenn Checkbox aktiviert */
+
+    #burger-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+
+    /* Links im Burger-Menü */
+
+    .nav-left {
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+/* ================= HERO ================= */
+
+.titelbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.titelbox-inhalt h1 {
+    color: var(--color-dark);
+    padding: 0;
+}
+
+.titelbox-button {
+    padding-top: 10px;
+}
+
+.titelbox-inhalt {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 8%;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .titelbox-inhalt {
+        left: 0%;
+    }
+
+    .titelbox-inhalt .titeltext {
+        font-size: 38px;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    .titelbox-inhalt {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 90%;
+        text-align: center;
+    }
+
+    .titelbox-inhalt .titeltext {
+        font-size: 30px;
+    }
+
+    .titelbox-button {
+        padding-top: 15px;
+    }
+
+}
+
+
+.hero {
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+}
+
+
+.hero-img{
+    width:100%;
+    height:500px;
+    flex-shrink:0;
+    object-fit:cover;
+    border-radius: 0px;
+}
+
+
+/* ================= TABLET ================= */
+/* Unter 1100px */
+
+@media (max-width:1100px){
+
+    .hero-slider,
+    .hero-img{
+
+        height:400px;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+/* Unter 600px */
+
+@media (max-width:600px){
+
+    .hero-slider,
+    .hero-img{
+
+        height:280px;
+    }
+
+    .hero {
+    padding: 20px 0px 0px 0px;
+    }
+}
+
+
+
+.hero-logo {
+  padding: 40px 40px 20px 40px;
+  height: 100px;
+}
+
+.titeltext {
+  padding: 0px 0px 0px 0px;
+}
+
+.herotext {
+  padding: 20px 40px 20px 40px;
+}
+
+.button {
+  padding: 10px 15px 10px 15px;
+
+  text-decoration: none;
+    color: var(--color-light);
+    cursor: pointer;
+
+    border-radius: var(--radius);
+    background-color: var(--color-blue);
+
+     display: inline-block;
+    transition: all 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button:hover {
+        background-color: var(--color-darkblue);
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+/* ================= SPIELE ================= */
+
+.games {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px 80px 20px;
+}
+
+
+/* Container für alle Spiele */
+
+.game-container {
+    display: grid;
+
+    /* 3 Karten nebeneinander */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+    max-width: 960px;
+}
+
+
+/* ================= GAME CARD ================= */
+
+.game-card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border-radius: var(--radius);
+    background-color: var(--color-light);
+
+    text-decoration: none;
+    color: var(--color-dark);
+
+    display: block;
+
+    transition: all 0.25s ease;
+
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .game-card:hover {
+        background-color: var(--color-grey);
+        transform: translateY(-2px) scale(1.03);
+    }
+
+}
+
+
+/* ================= SPIELBILD ================= */
+
+.game-card > img {
+    display: block;
+
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius);
+}
+
+
+/* ================= SPIEL INFO ================= */
+
+.game-info {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+
+.game-infotext {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.spielname {
+    padding: 20px 0px 0px 10px;
+}
+
+
+.spielgenre {
+    padding: 20px 0px 0px 10px;
+    margin-top: auto;
+}
+
+
+/* ================= INFO-BILD ================= */
+
+.game-info img {
+    padding: 20px 0px 0px 10px;
+
+    width: 140px;
+    max-width: 40%;
+
+    height: 100%;
+
+    margin-left: auto;
+
+    object-fit: contain;
+}
+
+
+/* ================= ANIMATION ================= */
+
+.game-card.show {
+    animation: jumpIn 0.4s ease forwards;
+}
+
+
+@keyframes jumpIn {
+
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 1000px) {
+
+    .game-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= HANDY ========================= */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .games {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+
+    .game-card > img {
+        height: 200px;
+    }
+
+}
+
+
+
+
+/* ================= RICHI ================= */
+.card-view {
+    margin: var(--padding);
+    display: flex;
+    padding: 15px;
+    border-radius: var(--radius);
+    background: var(--color-light);
+
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LINKS */
+.card-gallery {
+    width: 50%;
+}
+
+.card-main-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card-thumbnails {
+    display: flex;
+    gap: 15px;
+}
+
+.card-thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.card-thumbnails img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.preis {
+    padding-top: 40px;
+}
+
+.angaben {
+    height: 80px;
+    padding-top: 40px;
+
+}
+
+/* RECHTS */
+.card-details {
+    width: 50%;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .card-view {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .card-gallery,
+    .card-details {
+        width: 100%;
+    }
+
+    .card-main-image {
+        height: 400px;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    .card-view {
+        margin: 40px;
+        padding: 15px;
+
+        gap: 25px;
+    }
+
+    .card-gallery,
+    .card-details {
+        width: 100%;
+    }
+
+    .card-main-image {
+        height: 280px;
+    }
+
+    /* Thumbnails */
+
+    .card-thumbnails {
+        justify-content: left;
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .card-thumbnails img {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* Abstand etwas reduzieren */
+
+    .card-info {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .angaben {
+        height: 65px;
+        padding-top: 20px;
+    }
+
+    .preis {
+        padding-top: 20px;
+    }
+
+}
+
+
+
+/* ================= DATENSCHUTZ ================= */
+
+#datenschutz {
+    margin-top: 40px;
+}
+
+
+/* ================= ERKLÄRVIDEOS ================= */
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 40px auto 0;
+
+    padding: 0 40px;
+
+    box-sizing: border-box;
+}
+
+.video-container iframe {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    height: auto;
+
+    border: none;
+    border-radius: var(--radius);
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .video-container {
+        max-width: 800px;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    .video-container {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+
+}
+
+
+/* ================= VERLAG ================= */
+
+.verlag {
+    text-align: center;
+    padding: var(--padding);
+}
+
+.verlagsection-text {
+
+    padding: 20px 40px 0px 40px;
+}
+
+.publisher-images img {
+    width: 300px;
+    height: 200px;
+}
+
+
+/* ================= VERKAUFSPARTNER ================= */
+
+.publisher {
+    background: var(--color-light);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+.publisher-images {
+    display: grid;
+
+    /* Desktop: 2 Spalten */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 40px auto 0;
+}
+
+
+/* Karten */
+
+.verkaufer {
+    width: 100%;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Bilder */
+
+.publisher-images img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .verkaufer:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .publisher {
+        padding: 60px 20px;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    .publisher {
+        padding: 40px 15px;
+    }
+
+    .publisher-images {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+
+}
+
+
+.verkaufer {
+    background-color: transparent;
+    cursor: pointer;
+
+    padding: 10px 10px 10px 10px;
+
+    transition: all 0.2s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .verkaufer:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+
+.ueber-uns {
+    padding-top: 40px;
+}
+
+
+/* ================= SPIELCHRONIK ================= */
+
+.spielchronik {
+    text-align: center;
+    padding: var(--padding);
+    box-sizing: border-box;
+}
+
+
+/* ================= LINIEN ================= */
+
+.erste-linie-spielchronik,
+.linie-spielchronik {
+    border: none;
+    border-top: 1px solid var(--color-grey);
+
+    margin: 0;
+    width: 100%;
+}
+
+.erste-linie-spielchronik {
+    margin-top: 40px;
+}
+
+.linie-spielchronik {
+    margin-top: 0;
+}
+
+
+/* ================= ZEILEN ================= */
+
+.zeile {
+    display: grid;
+
+    grid-template-columns: 2fr 2fr 1fr;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/* erster Text */
+
+.zeile p:first-child {
+    text-align: left;
+
+    padding-left: 20%;
+
+    font-family: var(--font-title);
+    font-size: 20px;
+}
+
+
+/* Genre */
+
+.zeile p:nth-child(2) {
+    text-align: left;
+}
+
+
+/* Jahr */
+
+.zeile p:last-child {
+    text-align: left;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    .spielchronik {
+        padding: 50px 30px;
+    }
+
+    .zeile {
+        grid-template-columns: 1.5fr 1.5fr 0.7fr;
+    }
+
+    .zeile p:first-child {
+        padding-left: 5%;
+    }
+
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    .spielchronik {
+        padding: 40px 40px;
+    }
+
+    .erste-linie-spielchronik {
+        margin-top: 25px;
+    }
+
+    .zeile {
+        grid-template-columns: 1.4fr 1.3fr 0.6fr;
+
+        gap: 5px;
+    }
+
+    .zeile p {
+        font-size: 14px;
+    }
+
+    .zeile p:first-child {
+        padding-left: 0;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: var(--padding);
+}
+
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+    display: grid;
+
+    /* Titel | Text | Formular */
+    grid-template-columns: 180px minmax(200px, 1fr) minmax(400px, 1.5fr);
+
+    gap: 40px;
+
+    padding: 40px 40px 80px 40px;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= KONTAKT TITEL ================= */
+
+.kontakt-title {
+    display: flex;
+
+    background-color: transparent;
+
+    border: 2px solid var(--color-grey);
+    border-radius: var(--radius);
+
+    padding: 10px 15px;
+
+    margin: 0;
+
+    text-decoration: none;
+    color: black;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= KONTAKT TEXT ================= */
+
+.kontakt-textinfo {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ================= FORMULAR ================= */
+
+form {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+}
+
+
+/* ================= FORM ELEMENTE ================= */
+
+form input,
+form textarea,
+form button {
+    font-family: var(--font-text);
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    border-radius: var(--radius);
+
+    background-color: var(--color-light);
+
+    padding: 10px 15px;
+
+    min-width: 0;
+}
+
+
+/* ================= TEXTAREA ================= */
+
+textarea {
+    grid-column: span 2;
+
+    height: 80px;
+
+    resize: vertical;
+}
+
+
+/* ================= MAIL ICON ================= */
+
+.mail-icon {
+    height: 30px;
+    width: auto;
+
+    border-radius: 0;
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-section {
+        grid-template-columns: 150px minmax(0, 1fr);
+
+        gap: 30px;
+    }
+
+
+    /* Formular geht über die ganze Breite */
+
+    form {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= HANDY ========================= */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 0px 0px 60px 0px;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer {
+    padding: 40px 20px 20px 20px;
+    }
+
+    /* Titel */
+
+    .kontakt-title {
+        width: fit-content;
+    }
+
+
+    /* Beschreibung */
+
+    .kontakt-textinfo {
+        width: 100%;
+    }
+
+
+    /* Formular */
+
+    form {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
+
+    /* Alle Formularfelder eine Spalte */
+
+    form input,
+    form textarea,
+    form button {
+        grid-column: 1;
+        width: 100%;
+    }
+
+
+    textarea {
+        height: 120px;
+    }
+
+}
+
+
+.linie {
+    border: 1px solid var(--color-grey);
+    padding: 0px 40px 0px 40px;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.datenschutz-link{
+  text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    padding: 40px 0px 0px 0px;
+    display: flex;
+    flex-direction: row; 
+}
+
+
+/* ================= HANDY ================= */
+
+@media (max-width: 600px) {
+
+    /* Spielhafen im Footer ausblenden */
+
+    .footer-bottom .nav-center {
+        display: none;
+    }
+
+}
+
+
+.footer-bottom a {
+    color: var(--color-dark);
+}
+
+.socials img {
+    height: 30px;
+    padding: 6px 6px;
+    background: var(--color-light);
+ 
+}
+
+.socials {
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    background: var(--color-blue);
+    color: white;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: none; 
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    align-items: center; 
+    font-size: 14px;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+}
+
+/* ================= ANIMATION ================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

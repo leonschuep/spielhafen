@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielhafen</title>
+     <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav">
+
+ <!-- Nav left / Burger-Menü -->
+    <div class="nav-menu">
+
+        <!-- Unsichtbare Checkbox -->
+        <input type="checkbox" id="burger-toggle">
+
+        <!-- Burger-Icon -->
+        <label for="burger-toggle" class="burger-button" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menü-Links -->
+        <div class="nav-links">
+            <a href="spiele.html" class="nav-left">Unsere Spiele</a>
+            <a href="Ueber-uns.html" class="nav-left">Über uns</a>
+            <a href="erklaervideos.html" class="nav-left">Erklärvideos</a>
+        </div>
+
+    </div>
+
+    <!-- Logo Mitte -->
+    <div class="nav-center">
+        <a href="index.html">
+            <img src="assets/Logo.png" class="logo">
+            <span>Spielhafen</span>
+        </a>
+    </div>
+
+    <!-- Kontakt --> 
+    <div class="nav-right">
+        <a onclick="scrollToContact()">Kontakt</a>
+    </div>
+</header>
+
+<!-- ================= SPIEL ================= -->
+<div class="card-view">
+
+    <!-- linke Seite: Bilder -->
+    <div class="card-gallery">
+
+        <!-- großes Bild -->
+        <img id="main-preview-image" class="card-main-image" src="assets/spiel1.jpg">
+
+        <!-- Thumbnails -->
+        <div class="card-thumbnails">
+            <img src="assets/spiel1.jpg" onclick="setPreview(this)">
+            <img src="assets/spiel2.jpg" onclick="setPreview(this)">
+            <img src="assets/spiel3.jpg" onclick="setPreview(this)">
+            <img src="assets/spiel1-4.jpg" onclick="setPreview(this)">
+        </div>
+
+    </div>
+
+    <!-- rechte Seite: Info -->
+    <div class="card-details">
+
+        <div class="card-text-block">
+            <h1 class="card-title">Richi - Das Kartenspiel</h1>
+            <p class="card-info">
+                Rette Richi, denn er fällt jeden Moment vom Bagger auf den Boden! Verhindere dies, indem du geschickt spielst und gleichzeitig den anderen das Leben schwer machst. Wer als Erstes keine Leben mehr hat, verliert - die Person mit den meisten gewinnt.
+            </p>
+            <p> 50 Spielkarten <br>mit Anleitung
+            </p>
+        </div>
+
+        <img class="angaben" src="assets/angaben.png">
+        <h2 class="preis">
+                CHF 14.90   
+            </h2>
+        <div class = "titelbox-button">
+                <a  class="button">Sold out</a>
+            </div>
+
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="footer">
+
+    <div class="contact-section">
+            <div class="kontakt-text">
+            <h3 class="kontakt-title">Kontakt</h3>
+            </div>
+
+             <div class="kontakt-textinfo">
+            <p>Hast du ein Feedback zu einem Spiel oder eine Anfrage auf eine grössere Bestellung ? Dann kontaktiere uns gerne. </p>
+              <p> <br> Vielen Dank für deine Nachricht!</p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Name, Vorname">
+            <input type="text" placeholder="Unternehmen, Firma">
+            <input type="email" placeholder="E-Mail Adresse">
+            <input type="text" placeholder="*Telefonnummer">
+            <textarea placeholder="Nachricht"></textarea>
+
+            <button type="submit" class="btn">
+                <img src="assets/mail.png" class="mail-icon"> Senden
+            </button>
+        </form>
+
+    </div>
+
+    <hr class="linie">
+
+    <div class="footer-bottom">
+
+        <div class="links-footer">
+        <a href="datenschutz.html" class="datenschutz-link">
+        Datenschutz
+        </a>
+        <a>©2026</a>
+        </div>
+
+        <!-- Logo Mitte -->
+        <div class="nav-center">
+        <a href="index.html">
+            <img src="assets/Logo.png" class="logo">
+            <span>Spielhafen</span>
+        </a>
+         </div>
+
+        <div class="socials">
+    <a href="https://www.instagram.com/kartenspiel.richi/" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.youtube.com/@kartenspielrichi" target="_blank">
+        <img src="assets/YouTube.png" alt="YouTube">
+    </a>
+
+    <a href="https://www.tiktok.com" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok">
+    </a>
+
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/Facebook.png" alt="Facebook">
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

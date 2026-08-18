@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielhafen</title>
+     <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav">
+
+     <!-- Nav left / Burger-Menü -->
+    <div class="nav-menu">
+
+        <!-- Unsichtbare Checkbox -->
+        <input type="checkbox" id="burger-toggle">
+
+        <!-- Burger-Icon -->
+        <label for="burger-toggle" class="burger-button" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menü-Links -->
+        <div class="nav-links">
+            <a href="spiele.html" class="nav-left">Unsere Spiele</a>
+            <a href="Ueber-uns.html" class="nav-left">Über uns</a>
+            <a href="erklaervideos.html" class="nav-left">Erklärvideos</a>
+        </div>
+
+    </div>
+
+    <!-- Logo Mitte -->
+    <div class="nav-center">
+        <a href="index.html">
+            <!--<img src="assets/Logo.png" class="logo">-->
+            <span>Spielhafen</span>
+        </a>
+    </div>
+
+    <!-- Kontakt --> 
+    <div class="nav-right">
+        <a onclick="scrollToContact()">Kontakt</a>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero fade-in">
+    
+    <div class = "titelbox">
+        <div class="titelbox-inhalt">
+            <h1 class="titeltext">Unsere Spiele</h1>
+            <div class = "titelbox-button">
+                <a href="#verkaeufer" class="button">Zu den Verkäufern</a>
+            </div>
+        </div>
+
+        <img src="assets/spiel1.jpg" class="hero-img">
+    </div>
+</section>
+
+
+<!-- ================= SPIELE ================= -->
+<section class="games fade-in">
+
+    <div class="game-container" id="gameContainer">
+
+        <!-- Spiel 1 -->
+        <a href="richi.html" class="game-card">
+            <img src="assets/spiel1.jpg">
+
+            <div class="game-info">
+            <div class="game-infotext">
+                <h2 class="spielname">Richi</h2>
+                <p class="spielgenre">Familien-/ Partyspiel</p>
+              </div>
+              <img src="assets/angaben.png">
+        </div>
+    </a>
+
+
+               <!-- Spiel 2 -->
+        <a href="speed-up.html" class="game-card">
+            <img src="assets/spiel2.jpg">
+
+            <div class="game-info">
+            <div class="game-infotext">
+                <h2 class="spielname">Speed Up</h2>
+                <p class="spielgenre">Familienspiel</p>
+              </div>
+              <img src="assets/angaben.png">
+        </div>
+         </a>
+
+           <!-- Spiel 3 -->
+        <a href="8ung-8.html" class="game-card">
+            <img src="assets/spiel3.jpg">
+
+            <div class="game-info">
+            <div class="game-infotext">
+                <h2 class="spielname">8ung 8</h2>
+                <p class="spielgenre">Familienspiel</p>
+              </div>
+              <img src="assets/angaben.png">
+        </div>
+         </a>
+
+
+                      <!-- Spiel 4 -->
+        <a href="speed-up.html" class="game-card">
+            <img src="assets/spiel2.jpg">
+
+            <div class="game-info">
+            <div class="game-infotext">
+                <h2 class="spielname">SumSum</h2>
+                <p class="spielgenre">Familienspiel</p>
+              </div>
+              <img src="assets/angaben.png">
+        </div>
+         </a>
+  </div>
+</section>
+
+<!-- ================= VERKAUF ================= -->
+<section id="verkaeufer" class="publisher fade-in">
+
+
+    <h1 class="titeltext">Verkaufspartner</h1>
+
+    <p class="verlagsection-text">
+    Unsere Spiele sind in den folgenden Geschäften erhältlich.<br>
+    Bei einer Bestellung von über 5 Exemplaren kannst du uns auch persönlich über das Kontaktformular unten erreichen.
+</p>
+    
+
+    <div class="publisher-images">
+        <img src="assets/orell-fuessli.png" class="verkaufer">
+        <img src="assets/bider-und-tanner.png" class="verkaufer">
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="footer">
+
+    <div class="contact-section">
+            <div class="kontakt-text">
+            <h3 class="kontakt-title">Kontakt</h3>
+            </div>
+
+             <div class="kontakt-textinfo">
+            <p>Hast du ein Feedback zu einem Spiel oder eine Anfrage auf eine grössere Bestellung ? Dann kontaktiere uns gerne. </p>
+              <p> <br> Vielen Dank für deine Nachricht!</p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Name, Vorname">
+            <input type="text" placeholder="Unternehmen, Firma">
+            <input type="email" placeholder="E-Mail Adresse">
+            <input type="text" placeholder="*Telefonnummer">
+            <textarea placeholder="Nachricht"></textarea>
+
+            <button type="submit" class="btn">
+                <img src="assets/mail.png" class="mail-icon"> Senden
+            </button>
+        </form>
+
+    </div>
+
+    <hr class="linie">
+
+    <div class="footer-bottom">
+
+        <div class="links-footer">
+        <a href="datenschutz.html" class="datenschutz-link">
+        Datenschutz
+        </a>
+        <a>©2026</a>
+        </div>
+
+        <!-- Logo Mitte -->
+        <div class="nav-center">
+        <a href="index.html">
+            <img src="assets/Logo.png" class="logo">
+            <span>Spielhafen</span>
+        </a>
+         </div>
+
+        <div class="socials">
+    <a href="https://www.instagram.com/kartenspiel.richi/" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.youtube.com/@kartenspielrichi" target="_blank">
+        <img src="assets/YouTube.png" alt="YouTube">
+    </a>
+
+    <a href="https://www.tiktok.com" target="_blank">
+        <img src="assets/tiktok.png" alt="TikTok">
+    </a>
+
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/Facebook.png" alt="Facebook">
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
