@@ -41,3 +41,55 @@ function setPreview(img) {
 
 
 
+
+
+
+
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector("button[type='submit']");
+
+    submitButton.disabled = true;
+    formStatus.textContent = "Nachricht wird gesendet...";
+
+    const formData = new FormData(contactForm);
+
+    const data = {
+        name: formData.get("name"),
+        company: formData.get("company"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        message: formData.get("message")
+    };
+
+    try {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.message || "Fehler beim Senden");
+        }
+
+        formStatus.textContent = "Vielen Dank! Deine Nachricht wurde gesendet.";
+        contactForm.reset();
+
+    } catch (error) {
+        console.error(error);
+        formStatus.textContent =
+            "Leider konnte die Nachricht nicht gesendet werden.";
+    }
+
+    submitButton.disabled = false;
+});

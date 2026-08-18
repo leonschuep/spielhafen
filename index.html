@@ -156,17 +156,45 @@
               <p> <br> Vielen Dank für deine Nachricht!</p>
         </div>
 
-        <form>
-            <input type="text" placeholder="Name, Vorname">
-            <input type="text" placeholder="Unternehmen, Firma">
-            <input type="email" placeholder="E-Mail Adresse">
-            <input type="text" placeholder="*Telefonnummer">
-            <textarea placeholder="Nachricht"></textarea>
+        <form id="contact-form">
+    <input
+        type="text"
+        name="name"
+        placeholder="Name, Vorname"
+        required
+    >
 
-            <button type="submit" class="btn">
-                <img src="assets/mail.png" class="mail-icon"> Senden
-            </button>
-        </form>
+    <input
+        type="text"
+        name="company"
+        placeholder="Unternehmen, Firma"
+    >
+
+    <input
+        type="email"
+        name="email"
+        placeholder="E-Mail Adresse"
+        required
+    >
+
+    <input
+        type="tel"
+        name="phone"
+        placeholder="*Telefonnummer"
+    >
+
+    <textarea
+        name="message"
+        placeholder="Nachricht"
+        required
+    ></textarea>
+
+    <button type="submit" class="btn">
+        <img src="assets/mail.png" class="mail-icon"> Senden
+    </button>
+
+    <p id="form-status"></p>
+</form>
 
     </div>
 
