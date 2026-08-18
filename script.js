@@ -68,28 +68,34 @@ contactForm.addEventListener("submit", async function (event) {
     };
 
     try {
-        const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
+    const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
 
-        const result = await response.json();
+    const result = await response.json();
 
-        if (!response.ok) {
-            throw new Error(result.message || "Fehler beim Senden");
-        }
+    console.log("Status:", response.status);
+    console.log("Antwort von Vercel:", result);
 
-        formStatus.textContent = "Vielen Dank! Deine Nachricht wurde gesendet.";
-        contactForm.reset();
-
-    } catch (error) {
-        console.error(error);
-        formStatus.textContent =
-            "Leider konnte die Nachricht nicht gesendet werden.";
+    if (!response.ok) {
+        throw new Error(result.message || "Unbekannter Fehler");
     }
+
+    formStatus.textContent =
+        "Vielen Dank! Deine Nachricht wurde gesendet.";
+
+    contactForm.reset();
+
+} catch (error) {
+    console.error("Kontaktformular Fehler:", error);
+
+    formStatus.textContent =
+        "Fehler: " + error.message;
+}
 
     submitButton.disabled = false;
 });
