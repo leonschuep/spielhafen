@@ -49,10 +49,12 @@ ${message}
         });
 
     } catch (error) {
-        console.error(error);
+    console.error("SMTP FEHLER:", error);
+    console.error("SMTP CODE:", error.code);
+    console.error("SMTP RESPONSE:", error.response);
 
-        return res.status(500).json({
-            message: "Die Nachricht konnte nicht gesendet werden."
-        });
+    return res.status(500).json({
+        message: "SMTP Fehler: " + (error.response || error.message)
+    });
     }
 }
