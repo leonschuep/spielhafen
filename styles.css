@@ -255,6 +255,13 @@ html {
     transition: all 0.2s ease;
 }
 
+.kontakt-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .nav-right:hover {
         background-color: var(--color-grey);
@@ -318,6 +325,32 @@ html {
         margin: 0;
         width: 100%;
         box-sizing: border-box;
+    }
+
+        /* Kontakt auf Tablet/Mobile als Icon */
+
+    .nav-right {
+        padding: 8px 13px 8px 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-right a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .kontakt-text {
+        display: none;
+    }
+
+    .kontakt-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 0;
     }
 
 }
@@ -753,7 +786,7 @@ html {
 @media (max-width: 600px) {
 
     .card-view {
-        margin: 40px;
+        margin: 20px;
         padding: 15px;
 
         gap: 25px;
