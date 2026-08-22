@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/ueber-uns",
-      "destination": "/",
-      "permanent": false
-    }
-  ]
-}
