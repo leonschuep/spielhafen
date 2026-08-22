@@ -61,7 +61,6 @@ h1 {
 @media (max-width: 600px) {
     h1 {
         font-size: 32px;
-        margin: 0px 20px 0px 20px;
     }
 }
 
@@ -364,6 +363,11 @@ html {
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.slogan-titeltext {
+    font-size: 38px;
+    margin: 0px 20px 0px 20px;
 }
 
 .titelbox-inhalt h1 {
@@ -820,8 +824,8 @@ html {
     }
 
     .card-thumbnails img {
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
     }
 
     /* Abstand etwas reduzieren */
@@ -1025,7 +1029,7 @@ html {
 
 
 .ueber-uns {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 
