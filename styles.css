@@ -241,12 +241,15 @@ html {
 /* ================= KONTAKT ================= */
 
 .nav-right {
-    display: flex;
+    display: inline-block;
+}
+
+.nav-right a {
+    display: inline-block;
+    padding: 10px 15px;
 
     border-radius: var(--radius);
     background-color: var(--color-light);
-
-    padding: 10px 15px;
 
     text-decoration: none;
     color: black;
@@ -263,7 +266,7 @@ html {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .nav-right:hover {
+    .nav-right a:hover {
         background-color: var(--color-grey);
         transform: translateY(-2px) scale(1.03);
     }
@@ -346,6 +349,7 @@ html {
 
     .kontakt-text {
         display: none;
+        
     }
 
     .kontakt-icon {
