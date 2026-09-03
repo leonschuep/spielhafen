@@ -367,8 +367,6 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-
-     animation: heroZoom 10s ease-out forwards;
 }
 
 .slogan-titeltext {
