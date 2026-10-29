@@ -39,7 +39,20 @@ p + p { margin-top: 18px; }
 .no-script { padding: 30px; }
 
 /* 2. NAVIGATION – auf allen Seiten gleich, Inhalt in script.js. */
-#seitenkopf { border-bottom: 1px solid var(--linie); }
+/* Die Leiste scrollt zunächst aus dem Bild und gleitet später wieder herein.
+   Sticky erhält ihren Platz im Seitenaufbau, damit nichts springt. */
+#seitenkopf {
+  position: sticky;
+  top: -120px;
+  z-index: 30;
+  background: var(--papier);
+  border-bottom: 1px solid var(--linie);
+  transition: top .4s ease, box-shadow .4s ease;
+}
+#seitenkopf.is-scrolled {
+  top: 0;
+  box-shadow: 0 6px 20px #222f4e12;
+}
 .nav { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--blau); }
 .brand img { width: 49px; height: 42px; object-fit: contain; }

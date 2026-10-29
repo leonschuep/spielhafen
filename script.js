@@ -20,6 +20,14 @@ document.querySelector('#seitenfuss').innerHTML = `
   </div>
   <div class="wrap footer-bottom"><span>© ${new Date().getFullYear()} Spielhafen</span><div class="socials"><a href="https://www.instagram.com/spielhafen/" target="_blank" rel="noopener noreferrer">Instagram <span class="icon icon-diagonal" aria-hidden="true"></span></a><a href="https://www.youtube.com/@Spielhafen" target="_blank" rel="noopener noreferrer">YouTube <span class="icon icon-diagonal" aria-hidden="true"></span></a><a href="datenschutz.html">Datenschutz</a></div></div>`;
 
+// Nach etwas Scrollen gleitet die Navigation wieder von oben herein.
+const seitenkopf = document.querySelector('#seitenkopf');
+function aktualisiereNavigation() {
+  seitenkopf.classList.toggle('is-scrolled', window.scrollY > 180);
+}
+window.addEventListener('scroll', aktualisiereNavigation, { passive: true });
+aktualisiereNavigation();
+
 const aktuelleSeite = location.pathname.split('/').pop();
 document.querySelectorAll('.nav-links a').forEach(link => {
   if (link.getAttribute('href') === aktuelleSeite) link.setAttribute('aria-current', 'page');
