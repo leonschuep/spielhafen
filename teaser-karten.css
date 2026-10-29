@@ -21,7 +21,7 @@
   gap: 32px;
   /* Gleiche Inhaltsbreite wie Navigation und darunterliegende Abschnitte.
      Die Farbfläche reicht trotzdem bis an die Bildschirmränder. */
-  padding-block: 64px;
+  padding-block: 44px;
   padding-inline: max(48px, calc((100% - var(--breite)) / 2));
   min-height: calc(100vh - 105px);
   min-height: calc(100svh - 105px);
