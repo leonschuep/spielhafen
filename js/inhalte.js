@@ -11,7 +11,7 @@ const spiele = [
     bild: 'speedup1-optimiert.jpg',
     bilder: ['speedup1-optimiert.jpg', 'speedup2-optimiert.jpg', 'speedup3-optimiert.jpg', 'speedup4-optimiert.jpg', 'speedup5-optimiert.jpg'],
     beschreibung: 'Du steckst im permanenten Dilemma zwischen Geldbörse und grünem Gewissen. Taktik, Glück und gute Entscheidungen zählen: Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen. Die Person mit den meisten Kilometern gewinnt das Spiel.',
-    kurztext: 'Geldbörse oder grünes Gewissen? Eine Reise voller Taktik, Glück und überraschender Umwege.',
+    kurztext: 'Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen.',
     alter: '10+', personen: '2–4', dauer: '25 Min.',
     inhalt: '140 Spielkarten mit Anleitung',
     preis: 'CHF 19.90',
@@ -31,7 +31,7 @@ const spiele = [
     name: 'SumSum',
     teaser: true, // Noch keine Detailseite oder Verlinkung.
     genre: 'Unser nächstes Kartenspiel',
-    kurztext: 'Wir sind fleissig am Konzipieren …',
+    kurztext: 'Ein Spiel über Bienen',
     status: 'Coming soon',
     farbe: 'gelb'
   }
@@ -69,9 +69,9 @@ const startbilder = [
     alt: '',
     zeile: 'Unser nächstes Kartenspiel',
     titel: 'SumSum',
-    text: 'Wir sind fleissig am Konzipieren …',
+    text: 'Ein Spiel über Bienen',
     button: 'SumSum bald entdecken',
-    sticker: 'Soon',
+    sticker: 'Ende 2027',
     // Vorläufige SumSum-Palette: Honiggelb, Creme und Orangegelb.
     palette: {
       hintergrund: '#fff0ce',
