@@ -75,6 +75,7 @@ document.querySelectorAll('[data-spiele]').forEach(container => {
 // STARTBILDER: Automatisch alle 6 Sekunden, manuell auch mit Pfeilen und Wischen.
 const hero = document.querySelector('.hero');
 if (hero && startbilder.length) {
+  hero.classList.toggle('personalisiert', teaserKartenAktiv);
   let bildIndex = 0;
   const anzeigedauer = 6000; // Zeit pro Teaser in Millisekunden.
   let vergangen = 0;
@@ -96,6 +97,20 @@ if (hero && startbilder.length) {
     const spiel = spiele.find(spiel => spiel.id === bild.spiel);
     if (!spiel) return;
     const fuellen = () => {
+      // Die Farbpalette steht beim jeweiligen Startbild in js/inhalte.js.
+      const palette = bild.palette || {};
+      const farben = {
+        '--teaser-hintergrund': palette.hintergrund,
+        '--teaser-schrift': palette.schrift,
+        '--teaser-akzent': palette.akzent,
+        '--teaser-akzent-schrift': palette.akzentSchrift,
+        '--teaser-flaeche': palette.flaeche,
+        '--teaser-rahmen': palette.rahmen
+      };
+      Object.entries(farben).forEach(([name, wert]) => {
+        if (wert) hero.style.setProperty(name, wert);
+        else hero.style.removeProperty(name);
+      });
       foto.hidden = Boolean(spiel.teaser);
       if (bild.bild) foto.src = bild.bild;
       foto.alt = bild.alt;

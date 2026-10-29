@@ -40,6 +40,9 @@ const spiele = [
 /* STARTBILDER: Für ein weiteres Bild einen Block kopieren.
    spiel: muss der id eines Spiels oben entsprechen. Teaser ohne Bild und Verlinkung sind ebenfalls möglich.
    Produktfotos und Stimmungsbilder sind beide möglich. */
+// Test der persönlichen Teaser-Karten. Auf false setzen = bisherige Darstellung.
+const teaserKartenAktiv = true;
+
 const startbilder = [
   {
     spiel: 'speed-up',
@@ -48,7 +51,16 @@ const startbilder = [
     zeile: 'Familienspiel mit 140 Karten',
     titel: 'Speed Up',
     text: 'Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen.',
-    sticker: 'Bald erhältlich'
+    sticker: 'Bald erhältlich',
+    // Farben passend zur hellblauen Speed-Up-Schachtel.
+    palette: {
+      hintergrund: '#e7f3f8',
+      schrift: '#24516a',
+      akzent: '#8acbe0',
+      akzentSchrift: '#173e50',
+      flaeche: '#f8fcfe',
+      rahmen: '#bddde9'
+    }
   },
   {
     spiel: 'sumsum',
@@ -58,7 +70,16 @@ const startbilder = [
     titel: 'Coming soon',
     text: 'Wir sind fleissig am Konzipieren …',
     button: 'SumSum bald entdecken',
-    sticker: 'Soon'
+    sticker: 'Soon',
+    // Vorläufige SumSum-Palette: Honiggelb, Creme und Orangegelb.
+    palette: {
+      hintergrund: '#fff0ce',
+      schrift: '#624222',
+      akzent: '#f2b43e',
+      akzentSchrift: '#54320f',
+      flaeche: '#fffaf0',
+      rahmen: '#e9cb85'
+    }
   }
 ];
 

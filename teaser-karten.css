@@ -1,0 +1,82 @@
+/* Testgestaltung, nur für die Teaser auf der Startseite.
+   Rückgängig: teaserKartenAktiv = false in js/inhalte.js.
+   Die Farben werden beim jeweiligen Startbild gepflegt. */
+.hero-card { display: contents; }
+.hero.personalisiert {
+  display: block;
+  padding-block: 36px 48px;
+  --teaser-hintergrund: #e7f3f8;
+  --teaser-schrift: #24516a;
+  --teaser-akzent: #8acbe0;
+  --teaser-akzent-schrift: #173e50;
+  --teaser-flaeche: #f8fcfe;
+  --teaser-rahmen: #bddde9;
+}
+.hero.personalisiert .hero-card {
+  display: grid;
+  grid-template-columns: .82fr 1.28fr;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid var(--teaser-rahmen);
+  background: var(--teaser-hintergrund);
+  color: var(--teaser-schrift);
+  box-shadow: 0 12px 30px #222f4e08;
+  transition: background-color .45s ease, color .45s ease, border-color .45s ease;
+}
+.hero.personalisiert .hero-copy { padding-block: 18px; }
+.hero.personalisiert :is(h1, .eyebrow, .hero-description) { color: var(--teaser-schrift); }
+.hero.personalisiert .button {
+  color: var(--teaser-akzent-schrift);
+  background: var(--teaser-akzent);
+  border-color: var(--teaser-akzent);
+}
+.hero.personalisiert .button[aria-disabled=true] { opacity: 1; }
+.hero.personalisiert .photo-label {
+  color: var(--teaser-schrift);
+  background: var(--teaser-flaeche);
+}
+.hero.personalisiert .sticker {
+  color: var(--teaser-akzent-schrift);
+  background: var(--teaser-akzent);
+  border-color: var(--teaser-flaeche);
+  right: -16px;
+  top: 8px;
+}
+.hero.personalisiert .hero-photo { background: var(--teaser-flaeche); }
+.hero.personalisiert .teaser-placeholder {
+  background: var(--teaser-flaeche);
+  color: var(--teaser-akzent);
+}
+.hero.personalisiert .round-button {
+  border-color: var(--teaser-rahmen);
+  background: var(--teaser-flaeche);
+  color: var(--teaser-schrift);
+}
+.hero.personalisiert .dot::after { background: var(--teaser-rahmen); }
+.hero.personalisiert .dot[aria-current=true]::after { background: var(--teaser-schrift); }
+.hero.personalisiert .slide-progress { background: var(--teaser-rahmen); }
+.hero.personalisiert .slide-progress > span { background: var(--teaser-schrift); }
+@media (max-width:1000px) {
+  .hero.personalisiert .hero-card { padding: 30px; gap: 24px; }
+  .hero.personalisiert .hero-photo img,
+  .hero.personalisiert .hero-photo .teaser-placeholder { height: 360px; }
+}
+@media (max-width:760px) {
+  .hero.personalisiert { padding-block: 20px 30px; }
+  .hero.personalisiert .hero-card {
+    grid-template-columns: 1fr;
+    padding: 26px 22px;
+    gap: 16px;
+    border-radius: 22px;
+  }
+  .hero.personalisiert .hero-copy { padding-block: 4px 6px; }
+  .hero.personalisiert .hero-visual { margin-inline: 0; }
+  .hero.personalisiert .hero-photo img,
+  .hero.personalisiert .hero-photo .teaser-placeholder { height: auto; aspect-ratio: 1.2; }
+  .hero.personalisiert .sticker { right: -10px; }
+  .hero.personalisiert .hero-controls { gap: 8px; flex-wrap: wrap; }
+  .hero.personalisiert .slide-progress { width: 65px; }
+  .hero.personalisiert .button { gap: 16px; padding-inline: 18px; }
+}

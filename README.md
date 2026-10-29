@@ -133,3 +133,11 @@ Die Über-uns-Sektion und die entsprechende Unterseite sind vorerst entfernt.
 Diesen Ordner (`WebsiteSpielhafen_ChatGPT`) in Visual Studio Code verwenden. Er ist mit dem GitHub-Repository `leonschuep/spielhafen` und dem Zweig `main` verbunden. Änderungen speichern, in der Quellcodeverwaltung prüfen und committen, anschliessend mit GitHub synchronisieren (Push). Vercel veröffentlicht den neuen Stand automatisch im bestehenden Projekt «spielhafen».
 
 Die Domain bleibt bei Hostpoint und der E-Mail-Dienst bei Purelymail. Für normale Text-, Bild- oder Designänderungen müssen diese Einstellungen nicht angepasst werden. Die SMTP-Einstellungen sind bereits im bestehenden Vercel-Projekt für Production und Preview hinterlegt. Die Erreichbarkeit der Versandfunktion und ihre Eingabeprüfung wurden nach der Veröffentlichung geprüft; ein tatsächlicher E-Mail-Versand wurde nicht ausgelöst.
+
+## Persönliche Teaser-Karten und Farben
+
+Die Startseite hat testweise je Spiel eine eigene Kartenfläche mit persönlicher Farbpalette. Bei jedem Eintrag in `startbilder` in `js/inhalte.js` stehen die sechs Farben unter `palette`: Hintergrund, Schrift, Akzent, Akzentschrift, helle Fläche und Rahmen. Die Gestaltung betrifft nur die Teaser; die restliche Website behält ihre Farben.
+
+**Sofort zurück zur bisherigen Darstellung:** In `js/inhalte.js` den Schalter `teaserKartenAktiv` von `true` auf `false` setzen. Für die Veröffentlichung wie gewohnt committen und mit GitHub synchronisieren. Mit `true` wird die Kartengestaltung wieder aktiviert.
+
+Die zusätzlichen Gestaltungsregeln stehen separat in `teaser-karten.css`. Speed Up nutzt Hellblau und Weiss passend zur Verpackung. SumSum verwendet vorläufig eine eigene Palette aus Honiggelb, Creme und Orangegelb.
