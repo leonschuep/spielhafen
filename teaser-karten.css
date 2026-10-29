@@ -163,3 +163,8 @@
   .bienen-flug-3 { top: 62%; animation-duration: 22s; }
 }
 @media (prefers-reduced-motion:reduce) { .teaser-bienen { display: none; } }
+
+/* Handy: erst Produktbild mit Statuskreis, danach die Spielinformationen. */
+@media (max-width:760px) {
+  .hero.personalisiert .hero-visual { order: -1; }
+}
