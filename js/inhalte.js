@@ -66,8 +66,8 @@ const startbilder = [
     spiel: 'sumsum',
     bild: '', // Für den Teaser zeigen wir ein Fragezeichen.
     alt: '',
-    zeile: 'SumSum – unser nächstes Kartenspiel',
-    titel: 'Coming soon',
+    zeile: 'Unser nächstes Kartenspiel',
+    titel: 'SumSum',
     text: 'Wir sind fleissig am Konzipieren …',
     button: 'SumSum bald entdecken',
     sticker: 'Soon',
