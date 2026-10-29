@@ -8,8 +8,8 @@ const spiele = [
     name: 'Speed Up',
     untertitel: 'Hauptsache Kilometer!',
     genre: 'Familienspiel',
-    bild: 'speedup1.jpg',
-    bilder: ['speedup1.jpg', 'speedup2.jpg', 'speedup3.jpg', 'speedup4.jpg', 'speedup5.jpg'],
+    bild: 'speedup1-optimiert.jpg',
+    bilder: ['speedup1-optimiert.jpg', 'speedup2.jpg', 'speedup3.jpg', 'speedup4.jpg', 'speedup5.jpg'],
     beschreibung: 'Du steckst im permanenten Dilemma zwischen Geldbörse und grünem Gewissen. Taktik, Glück und gute Entscheidungen zählen: Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen. Die Person mit den meisten Kilometern gewinnt das Spiel.',
     kurztext: 'Geldbörse oder grünes Gewissen? Eine Reise voller Taktik, Glück und überraschender Umwege.',
     alter: '10+', personen: '2–4', dauer: '25 Min.',
@@ -43,7 +43,7 @@ const spiele = [
 const startbilder = [
   {
     spiel: 'speed-up',
-    bild: 'speedup1.jpg',
+    bild: 'speedup1-optimiert.jpg',
     alt: 'Die hellblaue Spielschachtel von Speed Up',
     zeile: 'Familienspiel mit 140 Karten',
     titel: 'Hauptsache Kilometer!',
