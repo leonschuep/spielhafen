@@ -61,7 +61,7 @@ p + p { margin-top: 18px; }
 .hero-photo { display: block; position: relative; border-radius: 42% 42% 20px 20px; background: #eee; overflow: hidden; transform: rotate(2deg); transition: transform .4s; }
 .hero-photo img { width: 100%; height: 453px; object-fit: cover; transition: opacity .22s, transform .7s; }
 .hero-photo.changing img { opacity: .25; }
-.photo-label { position: absolute; bottom: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; padding: 12px 18px; background: #ffffffeb; border-radius: 9px; color: var(--blau); }
+.photo-label { position: absolute; bottom: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; padding: 12px 18px; background: var(--papier); border-radius: 9px; color: var(--blau); }
 .hero-spark { position: absolute; left: -25px; top: -18px; z-index: 1; color: var(--orange); font-family: Georgia, serif; font-size: 92px; line-height: 1; transform: rotate(12deg); }
 .sticker { position: absolute; right: -26px; top: 24px; width: 122px; height: 122px; background: var(--orange); border: 6px double var(--papier); border-radius: 50%; display: grid; place-content: center; text-align: center; font-size: 12px; line-height: 1.7; transform: rotate(13deg); }
 .photo-note { display: block; margin-top: 16px; text-align: right; font-size: 12px; transform: rotate(-4deg); padding-right: 18px; }
