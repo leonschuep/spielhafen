@@ -196,18 +196,27 @@ if (chronik) chronik.innerHTML = spiele.filter(spiel => !spiel.teaser).sort((a, 
 
 // Aufpoppen nur einmal beim Sichtbarwerden.
 if ('IntersectionObserver' in window && !bewegungReduziert.matches) {
-  const observer = new IntersectionObserver(eintraege => {
+  function zeigeElemente(eintraege, observer) {
     eintraege.forEach(eintrag => {
       if (eintrag.isIntersecting) {
         eintrag.target.classList.add('visible');
         observer.unobserve(eintrag.target);
       }
     });
-  }, { threshold: .08 });
+  }
+  const observer = new IntersectionObserver(zeigeElemente, { threshold: .08 });
+  // Karten starten erst, wenn sie etwas weiter in den sichtbaren Bereich rücken.
+  const kartenObserver = new IntersectionObserver(zeigeElemente, {
+    threshold: .18,
+    rootMargin: '0px 0px -50px 0px'
+  });
   document.querySelectorAll('.reveal').forEach((element, index) => {
-    element.style.setProperty('--verzoegerung', `${(index % 2) * 100}ms`);
+    const istKarte = element.classList.contains('game-card');
+    const position = [...element.parentElement.children].indexOf(element);
+    const verzoegerung = istKarte ? 120 + (position % 2) * 220 : (index % 2) * 100;
+    element.style.setProperty('--verzoegerung', `${verzoegerung}ms`);
     element.classList.add('reveal-ready');
-    observer.observe(element);
+    (istKarte ? kartenObserver : observer).observe(element);
   });
 }
 
