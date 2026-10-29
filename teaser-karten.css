@@ -121,3 +121,45 @@
     padding-top: calc(28px + var(--startkopfhoehe, 84px));
   }
 }
+
+/* SumSum-Experiment: rein dekorative Bienen, schaltbar in js/inhalte.js. */
+.hero { position: relative; }
+.teaser-bienen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  contain: paint;
+}
+.bienen-flug { position: absolute; left: -60px; top: 26%; animation: bienen-reise 18s linear infinite; }
+.bienen-flug-2 { top: 67%; animation-duration: 23s; animation-delay: -11s; }
+.bienen-flug-3 { top: 42%; animation-duration: 27s; animation-delay: -19s; }
+.biene { display: block; position: relative; width: 32px; height: 24px; animation: bienen-summen 2.4s ease-in-out infinite; }
+.bienen-flug-2 .biene { transform: scale(.8); animation-delay: -.8s; }
+.bienen-flug-3 .biene { opacity: .8; animation-delay: -1.6s; }
+.bienen-koerper {
+  position: absolute; left: 2px; top: 8px; width: 26px; height: 17px;
+  border: 1.5px solid #624222; border-radius: 50%;
+  background: repeating-linear-gradient(90deg, #f6c653 0 7px, #624222 7px 11px);
+  transform: rotate(-10deg);
+}
+.bienen-koerper::before { content: ''; position: absolute; right: 3px; top: 4px; width: 3px; height: 3px; border-radius: 50%; background: #342719; }
+.bienen-koerper::after { content: ''; position: absolute; left: -5px; top: 5px; border-block: 3px solid transparent; border-right: 5px solid #624222; }
+.bienen-fluegel { position: absolute; z-index: 1; top: 0; left: 9px; width: 10px; height: 14px; border: 1px solid #a3bcc2; border-radius: 70% 70% 40% 40%; background: #f8fcfee8; transform-origin: bottom center; animation: bienen-flattern .18s ease-in-out infinite alternate; }
+.bienen-fluegel::after { content: ''; position: absolute; left: 6px; top: 1px; width: 9px; height: 12px; border: 1px solid #a3bcc2; border-radius: 70%; background: #f8fcfed9; transform: rotate(45deg); }
+@keyframes bienen-reise {
+  0% { left: -60px; }
+  100% { left: calc(100% + 60px); }
+}
+@keyframes bienen-summen {
+  0%, 100% { translate: 0 -12px; rotate: -6deg; }
+  50% { translate: 0 12px; rotate: 6deg; }
+}
+@keyframes bienen-flattern { from { transform: scaleX(.7) rotate(-18deg); } to { transform: scaleX(1) rotate(18deg); } }
+@media (max-width:760px) {
+  .bienen-flug { top: 48%; animation-duration: 15s; }
+  .bienen-flug-2 { top: 83%; animation-duration: 19s; }
+  .bienen-flug-3 { top: 62%; animation-duration: 22s; }
+}
+@media (prefers-reduced-motion:reduce) { .teaser-bienen { display: none; } }

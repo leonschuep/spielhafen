@@ -42,6 +42,7 @@ const spiele = [
    Produktfotos und Stimmungsbilder sind beide möglich. */
 // Test der persönlichen Teaser-Karten. Auf false setzen = bisherige Darstellung.
 const teaserKartenAktiv = true;
+const sumsumBienenAktiv = true; // Auf false setzen, um die Bienen auszublenden.
 
 const startbilder = [
   {

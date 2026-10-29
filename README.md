@@ -145,3 +145,5 @@ Die zusätzlichen Gestaltungsregeln stehen separat in `teaser-karten.css`. Speed
 Die persönliche Teaserfläche reicht aktuell bis zu den Bildschirmrändern und auf dem Desktop mindestens bis zum unteren Rand des ersten Bildschirms. Der Inhalt folgt weiterhin der Breite von Navigation und Spieleübersicht. Auch diese Variante lässt sich mit `teaserKartenAktiv = false` abschalten.
 
 Auf der Startseite liegt die Navigation oben transparent auf dem Teaser und übernimmt dessen Schriftfarben. Beim Scrollen kehrt sie zur normalen beigen Leiste zurück. Diese Testgestaltung ist an denselben Schalter `teaserKartenAktiv` gekoppelt.
+
+SumSum-Bienen: `sumsumBienenAktiv = false` in `js/inhalte.js` blendet das Experiment wieder aus. Die kleinen CSS-Bienen erscheinen nur beim SumSum-Teaser und werden bei reduzierter Bewegung ausgeblendet. Sie blockieren keine Links oder Buttons.

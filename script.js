@@ -86,6 +86,13 @@ if (hero && startbilder.length) {
     kopfhoeheAnpassen();
     if ('ResizeObserver' in window) new ResizeObserver(kopfhoeheAnpassen).observe(seitenkopf);
   }
+  // Kleine dekorative CSS-Bienen, ohne Bilder oder zusätzliche Bibliotheken.
+  const bienen = document.createElement('div');
+  bienen.className = 'teaser-bienen';
+  bienen.setAttribute('aria-hidden', 'true');
+  bienen.hidden = true;
+  bienen.innerHTML = [1, 2, 3].map(n => `<span class="bienen-flug bienen-flug-${n}"><span class="biene"><span class="bienen-fluegel"></span><span class="bienen-koerper"></span></span></span>`).join('');
+  hero.append(bienen);
   let bildIndex = 0;
   const anzeigedauer = 6000; // Zeit pro Teaser in Millisekunden.
   let vergangen = 0;
@@ -107,6 +114,7 @@ if (hero && startbilder.length) {
     const spiel = spiele.find(spiel => spiel.id === bild.spiel);
     if (!spiel) return;
     const fuellen = () => {
+      bienen.hidden = !sumsumBienenAktiv || spiel.id !== 'sumsum';
       // Die Farbpalette steht beim jeweiligen Startbild in js/inhalte.js.
       const palette = bild.palette || {};
       const farben = {
