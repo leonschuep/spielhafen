@@ -270,7 +270,7 @@ textarea { resize: vertical; }
 .button[aria-disabled=true] { cursor: default; opacity: .75; }
 @media (hover:hover) {
   .button[aria-disabled=true]:hover { transform: none; box-shadow: none; }
-  .teaser-photo:hover { transform: rotate(3.5deg); }
+  .teaser-photo:hover { transform: rotate(0); }
 }
 .retailers { margin-top: 0; }
 .retailers summary { width: fit-content; cursor: pointer; list-style: none; }
