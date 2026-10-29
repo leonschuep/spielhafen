@@ -103,7 +103,7 @@ Das Formular zeigt Erfolg erst nach erfolgreicher Serverantwort. Bei einem Fehle
 
 Die Datenschutzerklärung ist inhaltlich aus eurer bisherigen Website übernommen. Das Erklärvideo baut erst nach Klick eine Verbindung zu YouTube auf. Es wurden keine Analyse-, Cookie- oder Trackingdienste ergänzt.
 
-Es wurde keine neue Hosting-Plattform eingerichtet und nichts veröffentlicht. Alle Änderungen liegen in diesem Ordner.
+Die Website wurde am 29. Oktober 2026 im bestehenden Vercel-Projekt «spielhafen» unter https://www.spielhafen.ch veröffentlicht. Domain- und SMTP-Einstellungen des bisherigen Projekts wurden beibehalten.
 
 ## Prüfung der Überarbeitung
 
@@ -127,3 +127,9 @@ Die Produktadresse des jeweiligen Händlers bei `url` zwischen die Anführungsze
 SumSum ist mit `teaser: true` eingetragen: ohne Produktangaben und ohne anklickbare Detailseite. Die Vorschau zeigt ein Fragezeichen. Vor der Veröffentlichung des Spiels `teaser` entfernen, die vollständigen Spieldaten und Bilder ergänzen und die Startbildtexte anpassen. Die Stickertexte für die Startbilder stehen im jeweiligen Feld `sticker`.
 
 Die Über-uns-Sektion und die entsprechende Unterseite sind vorerst entfernt.
+
+## Künftig die veröffentlichte Website aktualisieren
+
+Diesen Ordner (`WebsiteSpielhafen_ChatGPT`) in Visual Studio Code verwenden. Er ist mit dem GitHub-Repository `leonschuep/spielhafen` und dem Zweig `main` verbunden. Änderungen speichern, in der Quellcodeverwaltung prüfen und committen, anschliessend mit GitHub synchronisieren (Push). Vercel veröffentlicht den neuen Stand automatisch im bestehenden Projekt «spielhafen».
+
+Die Domain bleibt bei Hostpoint und der E-Mail-Dienst bei Purelymail. Für normale Text-, Bild- oder Designänderungen müssen diese Einstellungen nicht angepasst werden. Die SMTP-Einstellungen sind bereits im bestehenden Vercel-Projekt für Production und Preview hinterlegt. Die Erreichbarkeit der Versandfunktion und ihre Eingabeprüfung wurden nach der Veröffentlichung geprüft; ein tatsächlicher E-Mail-Versand wurde nicht ausgelöst.
