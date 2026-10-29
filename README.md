@@ -141,3 +141,5 @@ Die Startseite hat testweise je Spiel eine eigene Kartenfläche mit persönliche
 **Sofort zurück zur bisherigen Darstellung:** In `js/inhalte.js` den Schalter `teaserKartenAktiv` von `true` auf `false` setzen. Für die Veröffentlichung wie gewohnt committen und mit GitHub synchronisieren. Mit `true` wird die Kartengestaltung wieder aktiviert.
 
 Die zusätzlichen Gestaltungsregeln stehen separat in `teaser-karten.css`. Speed Up nutzt Hellblau und Weiss passend zur Verpackung. SumSum verwendet vorläufig eine eigene Palette aus Honiggelb, Creme und Orangegelb.
+
+Die persönliche Teaserfläche reicht aktuell bis zu den Bildschirmrändern und auf dem Desktop mindestens bis zum unteren Rand des ersten Bildschirms. Der Inhalt folgt weiterhin der Breite von Navigation und Spieleübersicht. Auch diese Variante lässt sich mit `teaserKartenAktiv = false` abschalten.

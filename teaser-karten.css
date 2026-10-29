@@ -4,7 +4,9 @@
 .hero-card { display: contents; }
 .hero.personalisiert {
   display: block;
-  padding-block: 36px 48px;
+  width: 100%;
+  margin-inline: 0;
+  padding: 0;
   --teaser-hintergrund: #e7f3f8;
   --teaser-schrift: #24516a;
   --teaser-akzent: #8acbe0;
@@ -17,15 +19,24 @@
   grid-template-columns: .82fr 1.28fr;
   align-items: center;
   gap: 32px;
-  padding: 40px;
-  border-radius: 28px;
-  border: 1px solid var(--teaser-rahmen);
+  /* Gleiche Inhaltsbreite wie Navigation und darunterliegende Abschnitte.
+     Die Farbfläche reicht trotzdem bis an die Bildschirmränder. */
+  padding-block: 64px;
+  padding-inline: max(48px, calc((100% - var(--breite)) / 2));
+  min-height: calc(100vh - 105px);
+  min-height: calc(100svh - 105px);
+  border-radius: 0;
+  border: 0;
   background: var(--teaser-hintergrund);
   color: var(--teaser-schrift);
-  box-shadow: 0 12px 30px #222f4e08;
+  box-shadow: none;
   transition: background-color .45s ease, color .45s ease, border-color .45s ease;
 }
 .hero.personalisiert .hero-copy { padding-block: 18px; }
+.hero.personalisiert .hero-photo img,
+.hero.personalisiert .hero-photo .teaser-placeholder {
+  height: clamp(360px, calc(100svh - 240px), 620px);
+}
 .hero.personalisiert :is(h1, .eyebrow, .hero-description) { color: var(--teaser-schrift); }
 .hero.personalisiert .button {
   color: var(--teaser-akzent-schrift);
@@ -59,17 +70,18 @@
 .hero.personalisiert .slide-progress { background: var(--teaser-rahmen); }
 .hero.personalisiert .slide-progress > span { background: var(--teaser-schrift); }
 @media (max-width:1000px) {
-  .hero.personalisiert .hero-card { padding: 30px; gap: 24px; }
+  .hero.personalisiert .hero-card { padding: 48px 28px; gap: 24px; }
   .hero.personalisiert .hero-photo img,
   .hero.personalisiert .hero-photo .teaser-placeholder { height: 360px; }
 }
 @media (max-width:760px) {
-  .hero.personalisiert { padding-block: 20px 30px; }
+  .hero.personalisiert { padding: 0; }
   .hero.personalisiert .hero-card {
     grid-template-columns: 1fr;
-    padding: 26px 22px;
+    padding: 28px 20px 40px;
+    min-height: 0;
     gap: 16px;
-    border-radius: 22px;
+    border-radius: 0;
   }
   .hero.personalisiert .hero-copy { padding-block: 4px 6px; }
   .hero.personalisiert .hero-visual { margin-inline: 0; }
