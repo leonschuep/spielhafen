@@ -1,0 +1,85 @@
+/* HIER PFLEGT IHR EURE SPIELE.
+   Einen ganzen { ... }-Block kopieren und anpassen. Komma zwischen den Blöcken!
+   Neue Spiele öffnen sich automatisch in spiel.html?spiel=DEINE-ID.
+   Alle Pfade sind relativ zum Hauptordner der Website. */
+const spiele = [
+  {
+    id: 'speed-up',
+    name: 'Speed Up',
+    untertitel: 'Hauptsache Kilometer!',
+    genre: 'Familienspiel',
+    bild: 'speedup1.jpg',
+    bilder: ['speedup1.jpg', 'speedup2.jpg', 'speedup3.jpg', 'speedup4.jpg', 'speedup5.jpg'],
+    beschreibung: 'Du steckst im permanenten Dilemma zwischen Geldbörse und grünem Gewissen. Taktik, Glück und gute Entscheidungen zählen: Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen. Die Person mit den meisten Kilometern gewinnt das Spiel.',
+    kurztext: 'Geldbörse oder grünes Gewissen? Eine Reise voller Taktik, Glück und überraschender Umwege.',
+    alter: '10+', personen: '2–4', dauer: '25 Min.',
+    inhalt: '140 Spielkarten mit Anleitung',
+    preis: 'CHF 19.90',
+    status: 'Coming soon', // Verfügbarkeit hier ändern, sobald das Spiel erhältlich ist.
+    jahr: '2026',
+    hinweis: 'Unser erstes Spiel unter dem Namen Spielhafen.',
+    farbe: 'blau', // blau, gelb oder rosa
+    link: 'speed-up.html',
+    // Sobald die Produktseiten online sind: die jeweilige URL zwischen die Anführungszeichen setzen.
+    haendler: [
+      { name: 'Orell Füssli', url: '' },
+      { name: 'Bider&Tanner', url: '' }
+    ]
+  },
+  {
+    id: 'sumsum',
+    name: 'SumSum',
+    teaser: true, // Noch keine Detailseite oder Verlinkung.
+    genre: 'Unser nächstes Kartenspiel',
+    kurztext: 'Wir sind fleissig am Konzipieren …',
+    status: 'Coming soon',
+    farbe: 'gelb'
+  }
+];
+
+/* STARTBILDER: Für ein weiteres Bild einen Block kopieren.
+   spiel: muss der id eines Spiels oben entsprechen. Teaser ohne Bild und Verlinkung sind ebenfalls möglich.
+   Produktfotos und Stimmungsbilder sind beide möglich. */
+const startbilder = [
+  {
+    spiel: 'speed-up',
+    bild: 'speedup1.jpg',
+    alt: 'Die hellblaue Spielschachtel von Speed Up',
+    zeile: 'Familienspiel mit 140 Karten',
+    titel: 'Hauptsache Kilometer!',
+    text: 'Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen.',
+    sticker: 'Bald erhältlich'
+  },
+  {
+    spiel: 'sumsum',
+    bild: '', // Für den Teaser zeigen wir ein Fragezeichen.
+    alt: '',
+    zeile: 'SumSum – unser nächstes Kartenspiel',
+    titel: 'Coming soon',
+    text: 'Wir sind fleissig am Konzipieren …',
+    button: 'SumSum bald entdecken',
+    sticker: 'Soon'
+  }
+];
+
+// Nicht im Spieleprogramm gelistet. Für die bisherige Richi-Adresse aufbewahrt.
+const archivSpiele = [
+  {
+    id: 'richi',
+    name: 'Richi',
+    untertitel: 'Das Kartenspiel',
+    genre: 'Familien- / Partyspiel',
+    bild: 'assets/spiel1.jpg',
+    bilder: ['assets/spiel1.jpg', 'assets/spiel2.jpg', 'assets/spiel3.jpg'],
+    beschreibung: 'Rette Richi, denn er fällt jeden Moment vom Bagger auf den Boden! Verhindere dies, indem du geschickt spielst und gleichzeitig den anderen das Leben schwer machst. Wer als Erstes keine Leben mehr hat, verliert – die Person mit den meisten gewinnt.',
+    kurztext: 'Rette Richi vom Bagger – und mach deinen Mitspielenden das Leben ein bisschen schwer.',
+    alter: '8+', personen: '2–6', dauer: '25 Min.',
+    inhalt: '50 Spielkarten mit Anleitung',
+    preis: 'CHF 14.90',
+    status: 'Ausverkauft',
+    jahr: '2025',
+    hinweis: 'Hier hat alles angefangen. Noch vor der Gründung von Spielhafen.',
+    farbe: 'gelb',
+    link: 'richi.html'
+  }
+];

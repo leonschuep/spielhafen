@@ -1,258 +1,47 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spielhafen</title>
-    <link rel="icon" type="image/png" href="/assets/logo.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spielhafen – selbst entwickelte und gestaltete Kartenspiele aus der Schweiz. Entdecke Speed Up und unser kommendes Kartenspiel SumSum.">
+  <title>Kartenspiele mit einer Prise Chaos | Spielhafen</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/inhalte.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
-<body>
-
-
-<!-- ================= NAVIGATION ================= -->
-<header class="nav">
-
-    <!-- Nav left / Burger-Menü -->
-    <div class="nav-menu">
-
-        <!-- Unsichtbare Checkbox -->
-        <input type="checkbox" id="burger-toggle">
-
-        <!-- Burger-Icon -->
-        <label for="burger-toggle" class="burger-button" aria-label="Menü öffnen">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
-        <!-- Menü-Links -->
-        <div class="nav-links">
-            <a href="spiele.html" class="nav-left">Unsere Spiele</a>
-            <a href="ueber-uns.html" class="nav-left">Über uns</a>
-            <a href="erklaervideos.html" class="nav-left">Erklärvideos</a>
-        </div>
-
+<body >
+  <a class="skip-link" href="#inhalt">Zum Inhalt</a>
+  <header id="seitenkopf"></header>
+  <main id="inhalt">
+  <!-- Die wechselnden Bilder und Texte kommen aus js/inhalte.js. -->
+  <section class="hero wrap" aria-label="Unsere Spiele entdecken" aria-roledescription="Karussell">
+    <div class="hero-copy">
+      <p class="eyebrow" id="hero-zeile">Familienspiel mit 140 Karten</p>
+      <h1 id="hero-titel">Hauptsache Kilometer!</h1>
+      <p class="hero-description" id="hero-text">Geldbörse oder grünes Gewissen? Bei Speed Up ist der nächste Umweg schon vorprogrammiert.</p>
+      <a class="button" id="hero-link" href="speed-up.html">Speed Up entdecken <span aria-hidden="true">↗</span></a>
+      <div class="hero-controls" aria-label="Startbilder steuern">
+        <button class="round-button" id="vorheriges-bild" aria-label="Vorheriges Bild">←</button>
+        <div id="bild-punkte" class="dots"></div>
+        <button class="round-button" id="naechstes-bild" aria-label="Nächstes Bild">→</button>
+        <span class="slide-progress" aria-hidden="true"><span id="bild-fortschritt"></span></span>
+      </div>
     </div>
-
-
-    <!-- Logo Mitte -->
-    <div class="nav-center">
-        <a href="index.html">
-            <!-- <img src="assets/Logo.png" class="logo"> -->
-            <span>Spielhafen</span>
-        </a>
+    <div class="hero-visual">
+      <span class="hero-spark" aria-hidden="true">✳</span>
+      <a id="hero-bild-link" href="speed-up.html" class="hero-photo"><img id="hero-bild" src="speedup1.jpg" alt="Die hellblaue Spielschachtel von Speed Up" fetchpriority="high"><span class="teaser-placeholder" id="hero-platzhalter" hidden><span aria-hidden="true">?</span></span><span class="photo-label" id="hero-bild-label">Speed Up <span aria-hidden="true">↗</span></span></a>
+      <span class="sticker" id="hero-sticker">NEU</span>
     </div>
-
-
-<!-- Kontakt -->
-<div class="nav-right">
-    <a href="kontakt.html">
-        <span class="kontakt-text">Kontakt</span>
-        <img src="assets/Mail_black.png" class="kontakt-icon" alt="Kontakt">
-    </a>
-</div>
-
-</header>
-
-
-
-<!-- ================= HERO ================= -->
-<section class="hero fade-in">
-
-    <div class="titelbox">
-
-        <div class="titelbox-inhalt" id="heroOverlay">
-            <!-- Wird per JavaScript gefüllt -->
-        </div>
-
-        <img src="titelbild2.jpg"
-             class="hero-img"
-             id="heroImage">
-
-    </div>
-
-    <img src="assets/logo.png" class="hero-logo">
-
-    <h1 class="slogan-titeltext">
-        Steche in Abenteuer auf
-    </h1>
-
-    <p class="herotext">
-        Aktuelle Themen treffen auf absurden Humor –
-        für Spielspass mit überraschenden Wendungen.
-    </p>
-
-    <div class="alle-spiele">
-        <a href="spiele.html" class="button">Alle Spiele</a>
-    </div>
-
-</section>
-
-
-<!-- ================= SPIELE ================= -->
-<section class="games fade-in">
-
-    <div class="game-container" id="gameContainer">
-
-        <!-- Spiel 1 
-        <a href="richi.html" class="game-card">
-            <img src="assets/spiel1.jpg">
-
-            <div class="game-info">
-            <div class="game-infotext">
-                <h2 class="spielname">Richi</h2>
-                <p class="spielgenre">Familien-/ Partyspiel</p>
-              </div>
-              <img src="assets/angaben.png">
-        </div>
-    </a> -->
-
-
-               <!-- Spiel 2 -->
-        <a href="speed-up.html" class="game-card">
-            <img src="speedup1.jpg">
-
-            <div class="game-info">
-            <div class="game-infotext">
-                <h2 class="spielname">Speed Up</h2>
-                <p class="spielgenre">Familienspiel</p>
-              </div>
-              <img src="assets/angaben.png">
-        </div>
-         </a>
-
-            <!-- Spiel 3 -->
-        <a href="8ung-8.html" class="game-card">
-            <img src="assets/.jpg">
-
-            <div class="game-info">
-            <div class="game-infotext">
-                <h2 class="spielname">Coming soon</h2>
-                <p class="spielgenre">Familienspiel</p>
-              </div>
-              <img src="assets/angaben.png">
-        </div>
-         </a>
-
-         
-  </div>
-</section>
-
-
-<!-- ================= VERLAG ================= -->
-<section class="publisher fade-in">
-
-
-    <h1 class="titeltext">Zwei-Personen-Verlag</h1>
-
-    <p class="verlagsection-text">
-        Hoi
-    </p>
-
-<div class = "ueber-uns">
-    <a href="Ueber-uns.html" class="button">Über uns</a>
-
-    </div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer id="contact" class="footer">
-
-    <div class="contact-section">
-            <div class="kontakt-text">
-            <h3 class="kontakt-title">Kontakt</h3>
-            </div>
-
-             <div class="kontakt-textinfo">
-            <p>Hast du ein Feedback zu einem Spiel oder eine Anfrage auf eine grössere Bestellung oder Sonstiges? </p>
-              <p> <br> Wir freuen uns auf deine Nachricht!</p>
-        </div>
-
-        <form id="contact-form">
-    <input
-        type="text"
-        name="name"
-        placeholder="*Name, Vorname"
-        required
-    >
-
-    <input
-        type="text"
-        name="company"
-        placeholder="Unternehmen, Firma"
-    >
-
-    <input
-        type="email"
-        name="email"
-        placeholder="*E-Mail Adresse"
-        required
-    >
-
-    <input
-        type="tel"
-        name="phone"
-        placeholder="Telefonnummer"
-    >
-
-    <textarea
-        name="message"
-        placeholder="*Nachricht"
-        required
-    ></textarea>
-
-    <button type="submit" class="btn">
-        <img src="assets/Mail.png" class="mail-icon"> Senden
-    </button>
-
-    <p id="form-status"></p>
-</form>
-
-    </div>
-
-    <hr class="linie">
-
-    <div class="footer-bottom">
-
-        <div class="links-footer">
-        <a href="datenschutz.html" class="datenschutz-link">
-        Datenschutz
-        </a>
-        <a>©2026</a>
-        </div>
-
-        <!-- Logo Mitte -->
-        <div class="nav-center">
-        <a href="index.html">
-            <!-- <img src="assets/Logo.png" class="logo">-->
-            <span>Spielhafen</span>
-        </a>
-         </div>
-
-        <div class="socials">
-    <a href="https://www.instagram.com/kartenspiel.richi/" target="_blank">
-        <img src="assets/Instagram.png" alt="Instagram">
-    </a>
-
-    <a href="https://www.youtube.com/@kartenspielrichi" target="_blank">
-        <img src="assets/Youtube.png" alt="YouTube">
-    </a>
-
-    <a href="https://www.tiktok.com" target="_blank">
-        <img src="assets/tiktok.png" alt="TikTok">
-    </a>
-
-    <a href="https://www.facebook.com" target="_blank">
-        <img src="assets/Facebook.png" alt="Facebook">
-    </a>
-    </div>
-    </div>
-
-</footer>
-
-<script src="script.js"></script>
+  </section>
+  <div class="values-strip"><span>Junger Kartenspielverlag aus der Schweiz</span><span aria-hidden="true">✳</span><span>Jedes Jahr ein neues Spiel</span></div>
+  <section class="section wrap" aria-labelledby="spiele-titel">
+    <div class="section-heading"><div><h2 id="spiele-titel">Unsere Spiele</h2></div><a class="text-link" href="spiele.html">Alle Spiele <span aria-hidden="true">↗</span></a></div>
+    <div class="game-grid" data-spiele></div>
+  </section>
+  <section class="invitation wrap reveal"><span aria-hidden="true">✉</span><div><h2>Feedback, Anfrage auf grössere Bestellung oder Sonstiges?</h2><p>Wir freuen uns auf deine Nachricht!</p></div><a class="button" href="kontakt.html">Kontaktiere uns <span aria-hidden="true">↗</span></a></section>
+</main>
+  <footer id="seitenfuss"></footer>
+  <noscript><p class="no-script">Bitte aktiviere JavaScript für die Spieleübersicht. Unsere Spiele: <a href="speed-up.html">Speed Up</a>. SumSum folgt bald. Schreib uns an <a href="mailto:ahoi@spielhafen.ch">ahoi@spielhafen.ch</a>.</p></noscript>
 </body>
 </html>
