@@ -76,6 +76,16 @@ document.querySelectorAll('[data-spiele]').forEach(container => {
 const hero = document.querySelector('.hero');
 if (hero && startbilder.length) {
   hero.classList.toggle('personalisiert', teaserKartenAktiv);
+  seitenkopf.classList.toggle('teaser-navigation', teaserKartenAktiv);
+  if (teaserKartenAktiv) {
+    // Die Teaserfläche reicht hinter die transparente Navigation.
+    // Auch beim aufgeklappten Handymenü bleibt genug Platz für den Inhalt.
+    const kopfhoeheAnpassen = () => {
+      hero.style.setProperty('--startkopfhoehe', `${seitenkopf.offsetHeight}px`);
+    };
+    kopfhoeheAnpassen();
+    if ('ResizeObserver' in window) new ResizeObserver(kopfhoeheAnpassen).observe(seitenkopf);
+  }
   let bildIndex = 0;
   const anzeigedauer = 6000; // Zeit pro Teaser in Millisekunden.
   let vergangen = 0;
@@ -108,8 +118,10 @@ if (hero && startbilder.length) {
         '--teaser-rahmen': palette.rahmen
       };
       Object.entries(farben).forEach(([name, wert]) => {
-        if (wert) hero.style.setProperty(name, wert);
-        else hero.style.removeProperty(name);
+        [hero, seitenkopf].forEach(element => {
+          if (wert) element.style.setProperty(name, wert);
+          else element.style.removeProperty(name);
+        });
       });
       foto.hidden = Boolean(spiel.teaser);
       if (bild.bild) foto.src = bild.bild;

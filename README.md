@@ -143,3 +143,5 @@ Die Startseite hat testweise je Spiel eine eigene Kartenfläche mit persönliche
 Die zusätzlichen Gestaltungsregeln stehen separat in `teaser-karten.css`. Speed Up nutzt Hellblau und Weiss passend zur Verpackung. SumSum verwendet vorläufig eine eigene Palette aus Honiggelb, Creme und Orangegelb.
 
 Die persönliche Teaserfläche reicht aktuell bis zu den Bildschirmrändern und auf dem Desktop mindestens bis zum unteren Rand des ersten Bildschirms. Der Inhalt folgt weiterhin der Breite von Navigation und Spieleübersicht. Auch diese Variante lässt sich mit `teaserKartenAktiv = false` abschalten.
+
+Auf der Startseite liegt die Navigation oben transparent auf dem Teaser und übernimmt dessen Schriftfarben. Beim Scrollen kehrt sie zur normalen beigen Leiste zurück. Diese Testgestaltung ist an denselben Schalter `teaserKartenAktiv` gekoppelt.

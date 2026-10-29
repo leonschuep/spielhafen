@@ -92,3 +92,32 @@
   .hero.personalisiert .slide-progress { width: 65px; }
   .hero.personalisiert .button { gap: 16px; padding-inline: 18px; }
 }
+
+/* Oben transparent auf der Farbfläche des Spiels; beim Scrollen normal beige. */
+#seitenkopf.teaser-navigation:not(.is-scrolled) {
+  background: transparent;
+  border-bottom-color: transparent;
+  color: var(--teaser-schrift);
+}
+#seitenkopf.teaser-navigation:not(.is-scrolled) .brand { color: var(--teaser-schrift); }
+#seitenkopf.teaser-navigation:not(.is-scrolled) :is(.nav-contact, .menu-toggle) {
+  border-color: var(--teaser-schrift);
+}
+#seitenkopf.teaser-navigation:not(.is-scrolled) .nav-links a::after {
+  background: var(--teaser-akzent);
+}
+.hero.personalisiert { margin-top: calc(-1 * var(--startkopfhoehe, 105px)); }
+.hero.personalisiert .hero-card {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: calc(44px + var(--startkopfhoehe, 105px));
+}
+@media (max-width:1000px) and (min-width:761px) {
+  .hero.personalisiert .hero-card { padding-top: calc(48px + var(--startkopfhoehe, 105px)); }
+}
+@media (max-width:760px) {
+  .hero.personalisiert .hero-card {
+    min-height: 0;
+    padding-top: calc(28px + var(--startkopfhoehe, 84px));
+  }
+}
