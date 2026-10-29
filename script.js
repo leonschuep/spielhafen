@@ -8,17 +8,17 @@ document.querySelector('#seitenkopf').innerHTML = `
       <img src="assets/logo.png" width="49" height="42" alt="">
       <span class="brand-name">Spielhafen</span>
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menü ☰</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menü <span class="icon icon-menu" aria-hidden="true"></span></button>
     <div class="nav-links" id="navigation">
       <a href="spiele.html">Unsere Spiele</a>
-      <a href="erklaervideos.html">Erklärvideos</a><a class="nav-contact" href="kontakt.html">Kontakt ↗</a>
+      <a href="erklaervideos.html">Erklärvideos</a><a class="nav-contact" href="kontakt.html">Kontakt <span class="icon icon-diagonal" aria-hidden="true"></span></a>
     </div>
   </nav>`;
 document.querySelector('#seitenfuss').innerHTML = `
   <div class="wrap footer-top"><div><a class="footer-brand" href="index.html">Spielhafen</a></div>
-    <div class="footer-links"><a href="spiele.html">Unsere Spiele</a><a href="kontakt.html">Kontakt</a><a href="mailto:ahoi@spielhafen.ch">ahoi@spielhafen.ch ↗</a></div>
+    <div class="footer-links"><a href="spiele.html">Unsere Spiele</a><a href="kontakt.html">Kontakt</a><a href="mailto:ahoi@spielhafen.ch">ahoi@spielhafen.ch <span class="icon icon-diagonal" aria-hidden="true"></span></a></div>
   </div>
-  <div class="wrap footer-bottom"><span>© ${new Date().getFullYear()} Spielhafen</span><div class="socials"><a href="https://www.instagram.com/spielhafen/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@Spielhafen" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="datenschutz.html">Datenschutz</a></div></div>`;
+  <div class="wrap footer-bottom"><span>© ${new Date().getFullYear()} Spielhafen</span><div class="socials"><a href="https://www.instagram.com/spielhafen/" target="_blank" rel="noopener noreferrer">Instagram <span class="icon icon-diagonal" aria-hidden="true"></span></a><a href="https://www.youtube.com/@Spielhafen" target="_blank" rel="noopener noreferrer">YouTube <span class="icon icon-diagonal" aria-hidden="true"></span></a><a href="datenschutz.html">Datenschutz</a></div></div>`;
 
 const aktuelleSeite = location.pathname.split('/').pop();
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -58,7 +58,7 @@ document.querySelectorAll('[data-spiele]').forEach(container => {
       : `<img src="${spiel.bild}" alt="${spiel.name} – die Spielschachtel" loading="lazy">`;
     return `<${tag} ${link} class="game-card reveal${spiel.teaser ? ' teaser-card' : ''}">
       <div class="game-image ${spiel.farbe}">${foto}<span class="badge">${spiel.status}</span></div>
-      <div class="game-body"><div class="game-title-row"><h3>${spiel.name}</h3>${spiel.teaser ? '' : '<span class="card-arrow" aria-hidden="true">↗</span>'}</div>
+      <div class="game-body"><div class="game-title-row"><h3>${spiel.name}</h3>${spiel.teaser ? '' : '<span class="card-arrow" aria-hidden="true"><span class="icon icon-diagonal" aria-hidden="true"></span></span>'}</div>
       <p class="game-genre">${spiel.genre}</p><p class="game-description">${spiel.kurztext}</p>${spiel.teaser ? '' : spielFakten(spiel)}</div>
     </${tag}>`;
   }).join('');
@@ -112,8 +112,8 @@ if (hero && startbilder.length) {
         taste.href = spielLink(spiel);
         taste.removeAttribute('aria-disabled');
       }
-      taste.innerHTML = `${bild.button || spiel.name + ' entdecken'}${spiel.teaser ? '' : ' <span aria-hidden="true">↗</span>'}`;
-      document.querySelector('#hero-bild-label').innerHTML = `${spiel.name}${spiel.teaser ? '' : ' <span aria-hidden="true">↗</span>'}`;
+      taste.innerHTML = `${bild.button || spiel.name + ' entdecken'}${spiel.teaser ? '' : ' <span aria-hidden="true"><span class="icon icon-diagonal" aria-hidden="true"></span></span>'}`;
+      document.querySelector('#hero-bild-label').innerHTML = `${spiel.name}${spiel.teaser ? '' : ' <span aria-hidden="true"><span class="icon icon-diagonal" aria-hidden="true"></span></span>'}`;
       document.querySelector('#hero-sticker').textContent = bild.sticker || '';
       punkte.querySelectorAll('button').forEach((punkt, i) => punkt.setAttribute('aria-current', String(i === bildIndex)));
       fotoLink.classList.remove('changing');
@@ -172,7 +172,7 @@ if (details) {
   const id = document.body.dataset.spiel || new URLSearchParams(location.search).get('spiel');
   const spiel = [...spiele, ...archivSpiele].find(eintrag => eintrag.id === id);
   if (!spiel) {
-    details.innerHTML = '<h1>Dieses Spiel ist noch nicht im Hafen.</h1><p><a class="text-link" href="spiele.html">Unsere Spiele entdecken →</a></p>';
+    details.innerHTML = '<h1>Dieses Spiel ist noch nicht im Hafen.</h1><p><a class="text-link" href="spiele.html">Unsere Spiele entdecken <span class="icon icon-right" aria-hidden="true"></span></a></p>';
   } else if (spiel.teaser) {
     details.innerHTML = `<h1>${spiel.name} – Coming soon</h1><p>${spiel.kurztext}</p>`;
   } else {
@@ -181,7 +181,7 @@ if (details) {
       <div class="product-gallery"><img id="produkt-bild" class="product-main" src="${spiel.bild}" alt="${spiel.name} – Produktansicht 1">
         <div class="thumbnails" aria-label="Produktbilder">${spiel.bilder.map((bild, i) => `<button class="thumbnail" aria-label="${spiel.name}: Bild ${i + 1} anzeigen" aria-pressed="${i === 0}"><img src="${bild}" alt="" loading="lazy"></button>`).join('')}</div>
       </div>
-      <div class="product-copy"><p class="eyebrow">${spiel.genre}</p><h1>${spiel.name}</h1><p class="product-subtitle">${spiel.untertitel}</p><p>${spiel.beschreibung}</p>${spielFakten(spiel)}<p>${spiel.inhalt}</p><p class="product-price">${spiel.preis}</p><span class="availability">${spiel.status}</span>${spiel.haendler ? `<details class="retailers"><summary class="button">Erhältlich in <span aria-hidden="true">⌄</span></summary><ul>${spiel.haendler.map(laden => `<li>${laden.url ? `<a class="text-link" href="${laden.url}" target="_blank" rel="noopener noreferrer">${laden.name} ↗</a>` : `<span>${laden.name}</span>`}</li>`).join('')}</ul></details>` : '<a class="button" href="kontakt.html">Zum Spiel anfragen <span aria-hidden="true">↗</span></a>'}<p class="product-note">${spiel.hinweis}</p></div>
+      <div class="product-copy"><p class="eyebrow">${spiel.genre}</p><h1>${spiel.name}</h1><p class="product-subtitle">${spiel.untertitel}</p><p>${spiel.beschreibung}</p>${spielFakten(spiel)}<p>${spiel.inhalt}</p><p class="product-price">${spiel.preis}</p><span class="availability">${spiel.status}</span>${spiel.haendler ? `<details class="retailers"><summary class="button">Erhältlich in <span aria-hidden="true"><span class="icon icon-chevron" aria-hidden="true"></span></span></summary><ul>${spiel.haendler.map(laden => `<li>${laden.url ? `<a class="text-link" href="${laden.url}" target="_blank" rel="noopener noreferrer">${laden.name} <span class="icon icon-diagonal" aria-hidden="true"></span></a>` : `<span>${laden.name}</span>`}</li>`).join('')}</ul></details>` : '<a class="button" href="kontakt.html">Zum Spiel anfragen <span aria-hidden="true"><span class="icon icon-diagonal" aria-hidden="true"></span></span></a>'}<p class="product-note">${spiel.hinweis}</p></div>
     </article>`;
     details.querySelectorAll('.thumbnail').forEach((taste, index) => taste.addEventListener('click', () => {
       document.querySelector('#produkt-bild').src = spiel.bilder[index];
@@ -192,7 +192,7 @@ if (details) {
 }
 
 const chronik = document.querySelector('#spielchronik');
-if (chronik) chronik.innerHTML = spiele.filter(spiel => !spiel.teaser).sort((a, b) => a.jahr.localeCompare(b.jahr)).map(spiel => `<a class="chronicle-row" href="${spielLink(spiel)}"><span>${spiel.jahr}</span><h3>${spiel.name}</h3><p>${spiel.hinweis}</p><span aria-hidden="true">↗</span></a>`).join('');
+if (chronik) chronik.innerHTML = spiele.filter(spiel => !spiel.teaser).sort((a, b) => a.jahr.localeCompare(b.jahr)).map(spiel => `<a class="chronicle-row" href="${spielLink(spiel)}"><span>${spiel.jahr}</span><h3>${spiel.name}</h3><p>${spiel.hinweis}</p><span aria-hidden="true"><span class="icon icon-diagonal" aria-hidden="true"></span></span></a>`).join('');
 
 // Aufpoppen nur einmal beim Sichtbarwerden.
 if ('IntersectionObserver' in window && !bewegungReduziert.matches) {
