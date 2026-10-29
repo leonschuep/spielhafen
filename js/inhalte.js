@@ -9,7 +9,7 @@ const spiele = [
     untertitel: 'Hauptsache Kilometer!',
     genre: 'Familienspiel',
     bild: 'speedup1-optimiert.jpg',
-    bilder: ['speedup1-optimiert.jpg', 'speedup2.jpg', 'speedup3.jpg', 'speedup4.jpg', 'speedup5.jpg'],
+    bilder: ['speedup1-optimiert.jpg', 'speedup2-optimiert.jpg', 'speedup3-optimiert.jpg', 'speedup4-optimiert.jpg', 'speedup5-optimiert.jpg'],
     beschreibung: 'Du steckst im permanenten Dilemma zwischen Geldbörse und grünem Gewissen. Taktik, Glück und gute Entscheidungen zählen: Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen. Die Person mit den meisten Kilometern gewinnt das Spiel.',
     kurztext: 'Geldbörse oder grünes Gewissen? Eine Reise voller Taktik, Glück und überraschender Umwege.',
     alter: '10+', personen: '2–4', dauer: '25 Min.',
