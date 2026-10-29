@@ -46,7 +46,7 @@ const startbilder = [
     bild: 'speedup1-optimiert.jpg',
     alt: 'Die hellblaue Spielschachtel von Speed Up',
     zeile: 'Familienspiel mit 140 Karten',
-    titel: 'Hauptsache Kilometer!',
+    titel: 'Speed Up',
     text: 'Versuche am weitesten zu reisen, die anderen zu sabotieren und dem Chaos aus dem Weg zu gehen.',
     sticker: 'Bald erhältlich'
   },
